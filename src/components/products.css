@@ -1,0 +1,36 @@
+.container2{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:20px;
+}
+@media only screen and (min-width: 600px){
+    .container2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 900px){
+    .container2{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (min-width: 1200px){
+    .container2{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.product{
+    border:1px solid rgb(170, 165, 165);
+    padding: 10px;
+    border-radius: 5px;
+}
+.img-container{
+    display:flex;
+    justify-content: center;
+}
+img{
+    height:250px;
+    width:90%;
+    object-fit: contain;
+}

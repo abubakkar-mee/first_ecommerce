@@ -1,0 +1,15 @@
+.post-container{
+    width:50%;
+    background-color: rgb(30, 23, 45);
+    padding: 10px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.post-container:hover{
+    background-color: rgb(53, 41, 79);
+}
+.post-container h2{
+    color:white;
+}

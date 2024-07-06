@@ -1,0 +1,16 @@
+.container{
+    width:40%;
+    margin: 0 auto;
+    background-color: rgb(14, 7, 32);
+    border-radius: 12px;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container:hover{
+    background-color: rgb(27, 14, 60);;
+}
+.container h2{
+    color: white;
+}
