@@ -18,9 +18,10 @@ const Products = () => {
     },[])
   return (
     <>
+    <Link to='/'><button>Posts</button></Link>
     <div className="container2">
-        {load ? <h2>Loading...</h2>: products.map((product,i) =>(
-            <>
+        {load ? <div className="loader"></div>: products.map((product,i) =>(
+            <div key={i}>
             <Link state={product} to={`/products/${product.id}`}>
             <div className='product' key={i}>
                 <div className='img-container'><img src={product.thumbnail} alt="" /></div>
@@ -32,7 +33,7 @@ const Products = () => {
                 <button>order now</button>
             </div>
             </Link>
-            </>
+        </div>
         ))}
     </div>
     </>

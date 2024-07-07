@@ -11,8 +11,9 @@ const Single = () => {
   return (
     <>
     <div>
-        <div className='container'>
+        <div>
         <h2>{state.title}</h2>
+        <p>{state.body}</p>
         </div>
     <button onClick={goBack}>go bak</button>
     </div>

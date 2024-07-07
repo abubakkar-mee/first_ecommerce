@@ -6,21 +6,28 @@ import { Link } from 'react-router-dom';
 
 const App = () => {
   const [post, setPost] = useState([]);
+  const [load, setLoad] = useState(false)
   const getPost = async() =>{
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    setPost(res.data);
+    setLoad(true)
+    const res = await axios.get("https://dummyjson.com/posts?limit=0");
+    setPost(res.data.posts);
+    setLoad(false)
   }
   useEffect(() =>{
     getPost();
   },[])
   return (
     <>
-    {post.map((post) =>(
-      <div class='post-container' key={post.id}>
+    <Link to="/products"><button>Products</button></Link>
+    <div className='containerr'>
+    {load ? <div className='loader'></div>:post.map((post) =>(
+      <div className='post-container' key={post.id}>
         <h2>{post.title}</h2>
+        <h2>{post.body.substring(0,60)}....</h2>
         <Link to={`/post/${post.id}`} state={post}><button>click here</button></Link>
       </div>
     ))}
+    </div>
     </>
   )
 }
