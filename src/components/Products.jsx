@@ -12,6 +12,7 @@ const Products = () => {
         const res = await axios.get("https://dummyjson.com/products?limit=0");
         setProducts(res.data.products)
         setLoad(false)
+        
     }
     useEffect(()=>{
         getAllProducts()
@@ -20,7 +21,7 @@ const Products = () => {
     <>
     <Link to='/'><button>Posts</button></Link>
     <div className="container2">
-        {load ? <div className="loader"></div>: products.map((product,i) =>(
+        {load ? <div className='loader'></div>: products.map((product,i) =>(
             <div key={i}>
             <Link state={product} to={`/products/${product.id}`}>
             <div className='product' key={i}>
